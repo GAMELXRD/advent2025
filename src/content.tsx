@@ -67,7 +67,7 @@ export const defaultDaysData: Record<number, DayContent> = {
   "customColor": "amber",
   "title": "Отправление",
   "hidden": true,
-  "imageUrl": "https://i.ibb.co/nsJKC3K1/1blur.jpg"
+  "imageUrl": "https://i.ibb.co/B2P3Qgh1/1blur.jpg"
   },
   2: {
   "description": "Запись второго дня еще не расшифрована. Мы работаем над этим, чтобы недовольство не росло. Пожалуйста, ожидайте и сохраняйте надежду вместе с чатом.",
