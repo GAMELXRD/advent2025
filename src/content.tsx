@@ -53,7 +53,7 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 2,
       "text": "Сделать прикольный клип",
-      "done": false
+      "done": true
     },
     {
       "id": 3,
@@ -66,8 +66,8 @@ export const defaultDaysData: Record<number, DayContent> = {
   "forceOpen": false,
   "customColor": "amber",
   "title": "Отправление",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/B2P3Qgh1/1blur.jpg"
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/nsJKC3K1/1.jpg"
   },
   2: {
   "description": "Запись второго дня еще не расшифрована. Мы работаем над этим, чтобы недовольство не росло. Пожалуйста, ожидайте и сохраняйте надежду вместе с чатом.",
