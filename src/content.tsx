@@ -63,7 +63,7 @@ export const defaultDaysData: Record<number, DayContent> = {
   ],
   "streamLink": "",
   "clipLink": "",
-  "forceOpen": false,
+  "forceOpen": true,
   "customColor": "amber",
   "title": "Отправление",
   "hidden": false,
