@@ -75,12 +75,12 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Спросить за фильм",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Поругаться с ботом в чате",
-      "done": false
+      "done": true
     }
   ],
   "streamLink": "",
