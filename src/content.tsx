@@ -71,7 +71,18 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   2: {
   "description": "Запись второго дня еще не расшифрована. Мы работаем над этим, чтобы недовольство не росло. Пожалуйста, ожидайте и сохраняйте надежду вместе с чатом.",
-  "todos": [],
+  "todos": [
+    {
+      "id": 1,
+      "text": "Спросить за фильм",
+      "done": true
+    },
+    {
+      "id": 2,
+      "text": "Поругаться с ботом в чате",
+      "done": true
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "title": "День 2",
