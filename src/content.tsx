@@ -61,8 +61,8 @@ export const defaultDaysData: Record<number, DayContent> = {
       "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2632689275",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/MistyTenaciousPepperChefFrank-rpV-mardfc79qZYT",
   "forceOpen": true,
   "customColor": "amber",
   "title": "Отправление",
