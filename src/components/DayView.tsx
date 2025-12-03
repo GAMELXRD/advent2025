@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import { getDayContent, DefaultVisual } from '../content';
+import React, { useState, useEffect } from 'react';
+import { getDayContent, DefaultVisual, TodoItem } from '../content';
 
 interface DayViewProps {
   day: number;
@@ -10,15 +10,51 @@ interface DayViewProps {
 export const DayView: React.FC<DayViewProps> = ({ day, onBack }) => {
   // Load content for this specific day from our config file
   const content = getDayContent(day);
+  const storageKey = `cosmic_advent_day_${day}_todos`;
 
-  // Initial state for the todo list based on content
-  const [todos, setTodos] = useState(content.todos);
+  // Initialize State with LocalStorage Merge Logic
+  const [todos, setTodos] = useState<TodoItem[]>(() => {
+    try {
+      // 1. Get the base list from config (Source of Truth for Text & IDs)
+      const baseTodos = content.todos;
+      
+      // 2. Try to retrieve saved progress from LocalStorage
+      const savedData = localStorage.getItem(storageKey);
+      
+      if (savedData) {
+        const parsedData = JSON.parse(savedData) as { id: number; done: boolean }[];
+        
+        // 3. Merge: Map over base config, applying saved 'done' status where IDs match
+        return baseTodos.map(baseItem => {
+          const savedItem = parsedData.find(p => p.id === baseItem.id);
+          // If found in storage, use storage 'done' status. Otherwise use default.
+          return savedItem ? { ...baseItem, done: savedItem.done } : baseItem;
+        });
+      }
+      
+      // If no local storage, return default config
+      return baseTodos;
+    } catch (error) {
+      console.warn("Failed to load todos from localStorage:", error);
+      return content.todos;
+    }
+  });
   
   // NOTE: 'hidden' means strictly hidden (spoiler mode), not openable by click.
   const isHidden = content.hidden;
 
   const toggleTodo = (id: number) => {
-    setTodos(todos.map(t => t.id === id ? { ...t, done: !t.done } : t));
+    const newTodos = todos.map(t => t.id === id ? { ...t, done: !t.done } : t);
+    setTodos(newTodos);
+
+    // Save progress to LocalStorage
+    // We only save ID and Status to keep the storage lightweight and avoid overwriting text updates from Admin
+    try {
+      const stateToSave = newTodos.map(t => ({ id: t.id, done: t.done }));
+      localStorage.setItem(storageKey, JSON.stringify(stateToSave));
+    } catch (error) {
+      console.error("Failed to save todos:", error);
+    }
   };
 
   // Logic to determine what to render in the visual box
