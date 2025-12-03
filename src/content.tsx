@@ -83,8 +83,8 @@ export const defaultDaysData: Record<number, DayContent> = {
       "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2633495296",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/GiftedHandsomeElkThisIsSparta-2jpux2C6Z8wT-b3w",
   "title": "День 2",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/gZncH7rJ/2.jpg",
