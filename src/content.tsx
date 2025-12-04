@@ -7,6 +7,13 @@ export interface TodoItem {
   done: boolean;
 }
 
+// Тип для одного клипа (хайлайта)
+export interface ClipItem {
+  id: string;
+  url: string;
+  label: string; // Название на кнопке (например "Момент с котом")
+}
+
 // Тип для контента одного дня
 export interface DayContent {
   title?: string; 
@@ -16,7 +23,10 @@ export interface DayContent {
   imageBase64?: string; // For uploaded files
   todos: TodoItem[];
   streamLink?: string;
-  clipLink?: string;
+  // Legacy single link (kept for backward compatibility)
+  clipLink?: string; 
+  // New multiple clips support
+  clips?: ClipItem[];
   forceOpen?: boolean; // Новая настройка: визуально открытая клетка
   customColor?: string; // Новая настройка: цвет свечения (red, blue, green, etc.)
   hidden?: boolean; // Новая настройка: скрывает картинку за "шторкой" (спойлер)
@@ -93,26 +103,30 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   3: {
   "title": "День 3",
-  "description": "Космический Санта еще не доставил расписание на этот день. Оно отсутствует, как смысл в дешевом боевике, а время тянется мучительно медленно, словно пуля в густом сиропе. Ждем всем чатом.",
+  "description": "Космический Санта наконец доставил расписание на этот день. Оно упало на стол с тяжестью заряженного пистолета. В этом дешевом боевике наконец-то появился смысл. Добро пожаловать в холодную ночь.",
   "todos": [
     {
       "id": 1,
       "text": "Вычеркнуть пункт для проверки",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Обновить страницу",
-      "done": false
+      "done": true
     },
     {
       "id": 3,
       "text": "Сообщить о работоспособности в чат",
-      "done": false
+      "done": true
     }
   ],
   "streamLink": "https://www.twitch.tv/videos/2634245888",
-  "clipLink": "",
+  clips: [
+      { id: '1', url: 'https://www.twitch.tv/gamelxrd/clip/SuspiciousDreamyDragonfruitBCWarrior-iZ-GHlCnly_ehIKG', label: 'Явно не то' },  
+      { id: '2', url: 'https://www.twitch.tv/gamelxrd/clip/MotionlessArtsyDogDogFace-dac2i2SNQVkGU1JP', label: 'Смертельная петля' },
+      { id: '3', url: 'https://www.twitch.tv/gamelxrd/clip/TriumphantLittleKimchiThunBeast-3ApnxrWjnc0_OC0A', label: 'А ведь он предупреждал' }
+    ],
   "hidden": false,
   "imageUrl": "https://i.ibb.co/YFFDWGqX/3.jpg",
   "forceOpen": true,

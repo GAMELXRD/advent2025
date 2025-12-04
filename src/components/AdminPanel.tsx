@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { DayContent, getDayContent, saveDayContent } from '../content';
+import { DayContent, getDayContent, saveDayContent, ClipItem } from '../content';
 
 interface AdminPanelProps {
   onClose: () => void;
@@ -123,6 +123,41 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
         ...prev,
         todos: prev.todos.filter(t => t.id !== id)
       };
+    });
+    setIsSaved(false);
+  };
+
+  // Clip Management
+  const addClip = () => {
+    setFormData(prev => {
+      if (!prev) return null;
+      const newClip: ClipItem = {
+        id: Date.now().toString(),
+        url: '',
+        label: 'Клип'
+      };
+      // Initialize array if it doesn't exist
+      const currentClips = prev.clips || [];
+      return { ...prev, clips: [...currentClips, newClip] };
+    });
+    setIsSaved(false);
+  };
+
+  const updateClip = (id: string, field: keyof ClipItem, value: string) => {
+    setFormData(prev => {
+      if (!prev) return null;
+      const currentClips = prev.clips || [];
+      const newClips = currentClips.map(c => c.id === id ? { ...c, [field]: value } : c);
+      return { ...prev, clips: newClips };
+    });
+    setIsSaved(false);
+  };
+
+  const removeClip = (id: string) => {
+    setFormData(prev => {
+      if (!prev) return null;
+      const currentClips = prev.clips || [];
+      return { ...prev, clips: currentClips.filter(c => c.id !== id) };
     });
     setIsSaved(false);
   };
@@ -394,8 +429,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
               />
             </div>
 
-            {/* Links Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Stream Link & Clips Section */}
+            <div className="grid grid-cols-1 gap-6">
+              
+              {/* Stream Link (Full Width) */}
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-wider text-slate-500 font-bold">Ссылка на стрим</label>
                 <input 
@@ -406,16 +443,63 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                   className="w-full bg-slate-950 border border-slate-700 rounded p-3 text-white focus:border-purple-500 focus:outline-none transition-colors text-sm"
                 />
               </div>
-              <div className="space-y-2">
-                 <label className="text-xs uppercase tracking-wider text-slate-500 font-bold">Ссылка на клип</label>
-                <input 
-                  type="text" 
-                  value={formData.clipLink || ''}
-                  onChange={(e) => updateField('clipLink', e.target.value)}
-                  placeholder="https://..."
-                  className="w-full bg-slate-950 border border-slate-700 rounded p-3 text-white focus:border-purple-500 focus:outline-none transition-colors text-sm"
-                />
+
+              {/* Clips Management (Replaces single link) */}
+              <div className="space-y-4 pt-4 border-t border-slate-800">
+                 <div className="flex items-center justify-between">
+                    <label className="text-xs uppercase tracking-wider text-slate-500 font-bold">
+                       Список клипов / Хайлайтов
+                    </label>
+                    <button 
+                      onClick={addClip}
+                      className="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 px-3 py-1 rounded transition-colors"
+                    >
+                      + Добавить клип
+                    </button>
+                 </div>
+
+                 <div className="space-y-3">
+                   {(!formData.clips || formData.clips.length === 0) && (
+                     <div className="text-slate-600 text-sm italic p-4 text-center border border-slate-800 border-dashed rounded">
+                       Клипов пока нет. Добавьте первый хайлайт!
+                     </div>
+                   )}
+                   
+                   {formData.clips && formData.clips.map((clip, index) => (
+                     <div key={clip.id} className="flex items-start gap-2 bg-slate-950/50 p-3 rounded border border-slate-800">
+                        <div className="text-slate-600 text-xs font-mono pt-2 w-4">{index + 1}.</div>
+                        
+                        <div className="flex-1 space-y-2">
+                            {/* Label Input */}
+                            <input 
+                              type="text" 
+                              value={clip.label}
+                              onChange={(e) => updateClip(clip.id, 'label', e.target.value)}
+                              placeholder="Название кнопки (например: Смех)"
+                              className="w-full bg-slate-900 border border-slate-700 rounded p-2 text-xs text-white focus:border-blue-500 focus:outline-none"
+                            />
+                            {/* URL Input */}
+                            <input 
+                              type="text" 
+                              value={clip.url}
+                              onChange={(e) => updateClip(clip.id, 'url', e.target.value)}
+                              placeholder="https://clips.twitch.tv/..."
+                              className="w-full bg-slate-900 border border-slate-700 rounded p-2 text-xs text-blue-300 focus:border-blue-500 focus:outline-none"
+                            />
+                        </div>
+
+                        <button 
+                          onClick={() => removeClip(clip.id)}
+                          className="w-6 h-6 flex items-center justify-center text-slate-500 hover:text-red-500 hover:bg-slate-800 rounded transition-colors mt-1"
+                          title="Удалить клип"
+                        >
+                          ×
+                        </button>
+                     </div>
+                   ))}
+                 </div>
               </div>
+
             </div>
 
             {/* Todos Section */}

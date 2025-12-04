@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { getDayContent, DefaultVisual, TodoItem } from '../content';
+import { getDayContent, DefaultVisual, TodoItem, ClipItem } from '../content';
 
 interface DayViewProps {
   day: number;
@@ -86,6 +86,23 @@ export const DayView: React.FC<DayViewProps> = ({ day, onBack }) => {
     }
     return <DefaultVisual />;
   };
+
+  // NORMALIZE CLIPS
+  // We want a unified array of clips, whether they come from the new 'clips' array or the old 'clipLink' string
+  const activeClips: ClipItem[] = [];
+  
+  // 1. Add new style clips
+  if (content.clips && content.clips.length > 0) {
+    activeClips.push(...content.clips);
+  } 
+  // 2. Add legacy clip if no new clips exist AND it's not empty/hash
+  else if (content.clipLink && content.clipLink !== '#') {
+    activeClips.push({
+      id: 'legacy-clip',
+      url: content.clipLink,
+      label: 'Клип дня'
+    });
+  }
 
   // SVG Noise Pattern Data URI
   const noisePattern = `data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E`;
@@ -212,22 +229,31 @@ export const DayView: React.FC<DayViewProps> = ({ day, onBack }) => {
                  </div>
               </a>
 
-              {/* Clip of the Day Link */}
-              <a 
-                href={content.clipLink} 
-                className={`block p-4 border border-dashed border-slate-700 rounded transition-colors bg-slate-900/30 group ${!content.clipLink || content.clipLink === '#' ? 'opacity-50 cursor-not-allowed' : 'hover:border-blue-500/50'}`}
-                target='_blank'
-              >
-                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                       <span className="text-lg">🎬</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider font-bold">Хайлайт</span>
-                      <span className="text-sm md:text-base text-slate-200 group-hover:text-blue-300 transition-colors font-bold">Клип дня</span>
-                    </div>
-                 </div>
-              </a>
+              {/* Multiple Clip Buttons */}
+              {activeClips.length > 0 ? (
+                <div className="grid grid-cols-1 gap-3">
+                  {activeClips.map((clip) => (
+                    <a 
+                      key={clip.id}
+                      href={clip.url} 
+                      className={`block p-4 border border-dashed border-slate-700 rounded transition-colors bg-slate-900/30 group ${!clip.url || clip.url === '#' ? 'opacity-50 cursor-not-allowed' : 'hover:border-blue-500/50'}`}
+                    >
+                      <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
+                            <span className="text-lg">🎬</span>
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider font-bold">Хайлайт</span>
+                            <span className="text-sm md:text-base text-slate-200 group-hover:text-blue-300 transition-colors font-bold">{clip.label}</span>
+                          </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                /* Empty state spacer or fallback if needed */
+                null
+              )}
           </div>
         </div>
 
