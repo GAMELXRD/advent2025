@@ -138,12 +138,12 @@ export const defaultDaysData: Record<number, DayContent> = {
   "todos": [
     {
       "id": 1,
-      "text": "В моменте спамить Wind в чат",
+      "text": "Поставить ❤️ на пост в тг",
       "done": false
     },
     {
       "id": 2,
-      "text": "Поставить ❤️ на пост в тг",
+      "text": "В моменте спамить Wind в чат",
       "done": false
     }
   ],
