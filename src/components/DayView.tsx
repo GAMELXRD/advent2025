@@ -237,6 +237,7 @@ export const DayView: React.FC<DayViewProps> = ({ day, onBack }) => {
                       key={clip.id}
                       href={clip.url} 
                       className={`block p-4 border border-dashed border-slate-700 rounded transition-colors bg-slate-900/30 group ${!clip.url || clip.url === '#' ? 'opacity-50 cursor-not-allowed' : 'hover:border-blue-500/50'}`}
+                      target='_blank'
                     >
                       <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
