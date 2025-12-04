@@ -135,7 +135,18 @@ export const defaultDaysData: Record<number, DayContent> = {
   4: {
   "title": "День 4",
   "description": "Расшифровка логов еще в процессе. Собирайтесь в обсерватории с остальными зрителями, ведь в такой холод ты никогда не бываешь один.",
-  "todos": [],
+  "todos": [
+    {
+      "id": 1,
+      "text": "В моменте спамить Wind в чат",
+      "done": false
+    },
+    {
+      "id": 2,
+      "text": "Поставить ❤️ на пост в тг",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
