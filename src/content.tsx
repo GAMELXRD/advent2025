@@ -149,9 +149,9 @@ export const defaultDaysData: Record<number, DayContent> = {
   ],
   "streamLink": "",
   "clipLink": "",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/5hjSKnJ4/4blur.jpg",
-  "forceOpen": false,
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/QF5j21J1/4.jpg",
+  "forceOpen": true,
   "customColor": "#f2f2f2"
   },
   5: {
