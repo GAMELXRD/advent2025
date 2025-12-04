@@ -111,7 +111,7 @@ export const defaultDaysData: Record<number, DayContent> = {
       "done": false
     }
   ],
-  "streamLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2634245888",
   "clipLink": "",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/YFFDWGqX/3.jpg",
