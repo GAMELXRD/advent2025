@@ -134,21 +134,21 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   4: {
   "title": "День 4",
-  "description": "Расшифровка логов еще в процессе. Собирайтесь в чате с остальными зрителями, ведь в такой холод ты никогда не бываешь один.",
+  "description": "Логи расшифрованы. Ветер, сбивающий с ног, наконец-то утих. Мы прошли этот путь вместе, и теперь история доступна.",
   "todos": [
     {
       "id": 1,
       "text": "Поставить ❤️ на пост в тг",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "В моменте спамить Wind в чат",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2635074259",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/FilthyCheerfulTildeKAPOW-j8-BtMvvYtFjHeLK",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/QF5j21J1/4.jpg",
   "forceOpen": true,
