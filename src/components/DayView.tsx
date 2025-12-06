@@ -7,6 +7,63 @@ interface DayViewProps {
   onBack: () => void;
 }
 
+// Helper component for rich text rendering
+const RichTextRenderer: React.FC<{ text: string }> = ({ text }) => {
+  if (!text) return null;
+
+  // Split by double newlines for paragraphs
+  const paragraphs = text.split(/\n\n+/);
+
+  const parseStyle = (text: string): React.ReactNode[] => {
+    // Pass 1: Bold (**text**)
+    const boldParts = text.split(/(\*\*.*?\*\*)/g);
+    return boldParts.flatMap((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**') && part.length >= 4) {
+        return <strong key={`b-${i}`} className="font-bold text-purple-200">{part.slice(2, -2)}</strong>;
+      }
+      
+      // Pass 2: Strikethrough (~~text~~)
+      const strikeParts = part.split(/(~~.*?~~)/g);
+      return strikeParts.flatMap((subPart, j) => {
+        if (subPart.startsWith('~~') && subPart.endsWith('~~') && subPart.length >= 4) {
+          return <s key={`s-${i}-${j}`} className="opacity-60 decoration-slate-500 decoration-2">{subPart.slice(2, -2)}</s>;
+        }
+        
+        // Pass 3: Italic (*text*)
+        const italicParts = subPart.split(/(\*.*?\*)/g);
+        return italicParts.map((subSubPart, k) => {
+          if (subSubPart.startsWith('*') && subSubPart.endsWith('*') && subSubPart.length >= 2) {
+             return <em key={`i-${i}-${j}-${k}`} className="italic text-blue-200">{subSubPart.slice(1, -1)}</em>;
+          }
+          
+          // Handle single newlines as line breaks
+          return subSubPart.split('\n').reduce((acc, line, l, arr) => {
+              if (l > 0) acc.push(<br key={`br-${i}-${j}-${k}-${l}`} />);
+              acc.push(line);
+              return acc;
+          }, [] as React.ReactNode[]);
+        });
+      });
+    });
+  };
+
+  return (
+    <div className="space-y-4">
+      {paragraphs.map((para, idx) => {
+        // Check for horizontal rule syntax (---)
+        if (para.trim() === '---') {
+          return <hr key={idx} className="border-t-2 border-dashed border-slate-700/50 my-6" />;
+        }
+        return (
+          <p key={idx}>
+            {parseStyle(para)}
+          </p>
+        );
+      })}
+    </div>
+  );
+};
+
 export const DayView: React.FC<DayViewProps> = ({ day, onBack }) => {
   // Load content for this specific day from our config file
   const content = getDayContent(day);
@@ -207,8 +264,8 @@ export const DayView: React.FC<DayViewProps> = ({ day, onBack }) => {
         {/* Right Column: Description & Links */}
         <div className="flex-1 flex flex-col gap-6">
           
-          <div className="text-lg leading-8 text-slate-300 text-justify font-normal tracking-wide font-sans">
-            {content.description}
+          <div className="text-lg leading-8 text-slate-300 text-left font-normal tracking-wide font-sans">
+            <RichTextRenderer text={content.description} />
           </div>
 
           <div className="flex flex-col gap-4 font-sans">

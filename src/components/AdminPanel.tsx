@@ -419,7 +419,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
 
             {/* Description Input */}
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-wider text-slate-500 font-bold">Описание</label>
+              <label className="text-xs uppercase tracking-wider text-slate-500 font-bold flex justify-between">
+                <span>Описание</span>
+                <span className="text-[10px] text-slate-500 normal-case">**жирный**, *курсив*, ~~зачеркнутый~~, --- разделитель</span>
+              </label>
               <textarea 
                 value={typeof formData.description === 'string' ? formData.description : ''}
                 onChange={(e) => updateField('description', e.target.value)}
