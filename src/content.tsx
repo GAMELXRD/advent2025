@@ -178,7 +178,7 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   6: {
   "title": "День 6",
-  "description": "Контент на стыковке с сервером. Занимайтесь разговорами в главном зале. Найдите себе достойного собеседника или, на худой конец, поругайтесь с дорожным знаком. Говорят, они выигрывают все споры, если дать им слово.",
+  "description": "**15:00** Контент на стыковке с сервером. Занимайтесь разговорами в главном зале. Найдите себе достойного собеседника или, на худой конец, поругайтесь с дорожным знаком. Говорят, они выигрывают все споры, если дать им слово.\n\n---\n\n**20:40** Сервер всё еще думает. Кстати, не советую вступать в дебаты с дорожной инфраструктурой — кажется, знак всё-таки переубедил меня. Его аргументы о тщетности бытия... железобетонные. Продолжаем ждать, пытаясь сохранить остатки рассудка",
   "todos": [
     {
       "id": 1,
@@ -191,8 +191,8 @@ export const defaultDaysData: Record<number, DayContent> = {
       "done": false
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2636810060",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/AuspiciousSingleTrayDoritosChip-qlkZdZLghHykAeY9",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/hxCgnHvk/6.jpg",
   "forceOpen": true,
