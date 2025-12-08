@@ -230,16 +230,16 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Поздравить знакомых художников ✨",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Пережить этот день",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2638565615",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/KitschyBrainyBatRedCoat-kU4pSCrpz0udvAP-",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/nMGWywkV/8.jpg", 
   "forceOpen": true,
