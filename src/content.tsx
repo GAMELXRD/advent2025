@@ -214,10 +214,10 @@ export const defaultDaysData: Record<number, DayContent> = {
     }
   ],
   clips: [
-      { id: '1', url: 'https://www.twitch.tv/gamelxrd/clip/FunnyClumsyLEDResidentSleeper-ih24lTpgkhMAN_Vg', label: 'Новогодний вайбик в Сиэтле' },  
-      { id: '2', url: 'https://www.twitch.tv/gamelxrd/clip/GloriousAdventurousFrogBabyRage-5Et5vd3jfbu1NAz8', label: 'Отсылка на Dead Space 2' },
+    { id: '1', url: 'https://www.twitch.tv/gamelxrd/clip/GloriousAdventurousFrogBabyRage-5Et5vd3jfbu1NAz8', label: 'Отсылка на Dead Space 2' },  
+    { id: '2', url: 'https://www.twitch.tv/gamelxrd/clip/FunnyClumsyLEDResidentSleeper-ih24lTpgkhMAN_Vg', label: 'Новогодний вайбик в Сиэтле' }
     ],
-  "clipLink": "https://www.twitch.tv/gamelxrd/clip/FunnyClumsyLEDResidentSleeper-ih24lTpgkhMAN_Vg",
+  "streamLink": "https://www.twitch.tv/videos/2637601816",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/hxCgnHvk/6.jpg",
   "forceOpen": true,
