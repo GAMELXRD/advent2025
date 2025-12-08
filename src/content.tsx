@@ -230,18 +230,18 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Поздравить знакомых художников ✨",
-      "done": true
+      "done": false
     },
     {
       "id": 2,
       "text": "Пережить этот день",
-      "done": true
+      "done": false
     }
   ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
-  "imageUrl": "https://i.ibb.co/7xdkfDfb/8blur.jpg",
+  "imageUrl": "https://i.ibb.co/7xdkfDfb/8blur.jpg", 
   "forceOpen": false,
   "customColor": "blue"
   },
