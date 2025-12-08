@@ -205,16 +205,19 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Отправить любой смайлик со снегом",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Выпить немного.. чаю 🍵",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  clips: [
+      { id: '1', url: 'https://www.twitch.tv/gamelxrd/clip/FunnyClumsyLEDResidentSleeper-ih24lTpgkhMAN_Vg', label: 'Новогодний вайбик в Сиэтле' },  
+      { id: '2', url: 'https://www.twitch.tv/gamelxrd/clip/GloriousAdventurousFrogBabyRage-5Et5vd3jfbu1NAz8', label: 'Отсылка на Dead Space 2' },
+    ],
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/FunnyClumsyLEDResidentSleeper-ih24lTpgkhMAN_Vg",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/hxCgnHvk/6.jpg",
   "forceOpen": true,
