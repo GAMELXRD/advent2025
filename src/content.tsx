@@ -248,12 +248,23 @@ export const defaultDaysData: Record<number, DayContent> = {
   9: {
   "title": "День 9",
   "description": "Космический курьер опаздывает. Связь прерывается, он буквально на волосок от смерти в этой метели. Ждем прибытия вместе.",
-  "todos": [],
+  "todos": [
+    {
+      "id": 1,
+      "text": "Отдыхать",
+      "done": false
+    },
+    {
+      "id": 2,
+      "text": "Работать",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/0z2TNnp/9blur.jpg",
-  "forceOpen": false,
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/n8Zr02Bd/9.jpg",
+  "forceOpen": true,
   "customColor": "#f2f2f2"
   },
   10: {
