@@ -247,21 +247,20 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   9: {
   "title": "День 9",
-  "description": "Космический курьер опаздывает. Связь прерывается, он буквально на волосок от смерти в этой метели. Ждем прибытия вместе.",
+  "description": "**13:30** Космический курьер опаздывает. Связь прерывается, он буквально на волосок от смерти в этой метели. Ждем прибытия вместе.\n\n---\n\n**19:45** Есть визуальный контакт! Сквозь метель пробился свет прожекторов. Курьер добрался до заброшенной станции и запустил генераторы. Буря осталась снаружи, а внутри снова есть жизнь.",
   "todos": [
     {
       "id": 1,
       "text": "Отдыхать",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Работать",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2639333362",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/n8Zr02Bd/9.jpg",
   "forceOpen": true,
@@ -270,7 +269,13 @@ export const defaultDaysData: Record<number, DayContent> = {
   10: {
   "title": "Тревога",
   "description": "Двигатели остывают! Впереди по курсу — зона аномального холода. Укрепляйте отсеки, наш корабль не должен пасть!",
-  "todos": [],
+  "todos": [
+    {
+      "id": 1,
+      "text": "Задумчиво отметить данный пункт, как выполненный",
+      "done": false
+    }
+  ],
   "customColor": "red",
   "hidden": true,
   "imageUrl": "https://i.ibb.co/7cNhbtm/10blur.jpg",
