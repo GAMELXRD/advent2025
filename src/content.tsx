@@ -277,9 +277,9 @@ export const defaultDaysData: Record<number, DayContent> = {
     }
   ],
   "customColor": "red",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/7cNhbtm/10blur.jpg",
-  "forceOpen": false
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/r2tFw4GB/10.jpg",
+  "forceOpen": true
   },
   11: {
   "title": "День 11",
