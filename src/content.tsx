@@ -285,7 +285,13 @@ export const defaultDaysData: Record<number, DayContent> = {
   11: {
   "title": "День 11",
   "description": "Данные из гиперпространства в пути. Если увидите стаю ворон или почувствуете, что впадаете в транс — немедленно сообщите. Отдыхайте в общей зоне с командой.",
-  "todos": [],
+  "todos": [
+    {
+      "id": 1,
+      "text": "Досидеть до The Game Awards",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
