@@ -300,21 +300,21 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   12: {
   "title": "День 12",
-  "description": "Логи этого дня в карантине. Если вы задремали в ожидании... Эй, ты. Не спишь? Ты наконец-то проснулся? Ожидайте в баре с видом на галактику.",
+  "description": "**18:00** Логи этого дня в карантине. Если вы задремали в ожидании... Эй, ты. Не спишь? Ты наконец-то проснулся? Ожидайте в баре с видом на галактику.\n\n---\n\n**05:30** Связь установлена, но Голос должен восстановиться. Нам нужно время, чтобы помедитировать над Словами Силы перед следующим рывком. Не тратьте баллы попусту и ждите сигнала. Скайрим... то есть космос, никуда не убежит.",
   "todos": [
     {
       "id": 1,
       "text": "Восславлять победителя номинации Игра Года",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Запросить возврат баллов в конце дня",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2641943326",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/MagnificentPeacefulShingleOMGScoots-0FZaaX9NozZvBPo-",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/spqZFV68/12.jpg",
   "forceOpen": true,
@@ -323,7 +323,13 @@ export const defaultDaysData: Record<number, DayContent> = {
   13: {
   "title": "День 13",
   "description": "Сообщение в транзите через астероидное поле. Будьте осторожны: кажется, за перехват этого файла назначена солидная награда. Отдыхайте с чатом, пока наемники не вышли на след.",
-  "todos": [],
+  "todos": [
+    {
+      "id": 1,
+      "text": "Все еще восславлять победителя номинации Игра Года",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
