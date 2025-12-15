@@ -356,12 +356,18 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   15: {
   "title": "День 15",
-  "description": "Расписание не синхронизировано. Курьер задерживается где-то в снежной буре. Собираемся в зале ожидания — включим лоу-фай радио и будем ждать.",
-  "todos": [],
+  "description": "**12:10** Расписание не синхронизировано. Курьер задерживается где-то в снежной буре. Собираемся в зале ожидания — включим лоу-фай радио и будем ждать.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Поставить ❤️ на пост в тг",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
-  "imageUrl": "https://i.ibb.co/spDDxk29/15blur.jpg",
+  "imageUrl": "https://i.ibb.co/spDDxk29/15blur.jpg", 
   "forceOpen": false,
   "customColor": "#f2f2f2"
   },
