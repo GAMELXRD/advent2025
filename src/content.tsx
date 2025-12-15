@@ -344,11 +344,11 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Выпить горячего чая за здоровье стримера",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2643801792",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/SneakyImpossibleToadMoreCowbell-pTM0PMxvmhngkEuI",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/qY3XCbZj/blank.jpg",
   "forceOpen": true,
@@ -356,15 +356,15 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   15: {
   "title": "День 15",
-  "description": "**12:10** Расписание не синхронизировано. Курьер задерживается где-то в снежной буре. Собираемся в зале ожидания — включим лоу-фай радио и будем ждать.",
+  "description": "**12:10** Расписание не синхронизировано. Курьер задерживается где-то в снежной буре. Собираемся в зале ожидания — включим лоу-фай радио и будем ждать.\n\n---\n\n**18:50** Плейлист лоу-фай радио подошел к концу. Это была отличная поездка, но нельзя вечно кружить по одному району. Мы глушим мотор, оставляем этот уютный город позади и возвращаемся на орбиту. Спасибо за компанию.",
   "todos": [
     {
       "id": 1,
       "text": "Поставить ❤️ на пост в тг",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2644404743",
   "clipLink": "",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/qLMj2dRc/15.jpg", 
