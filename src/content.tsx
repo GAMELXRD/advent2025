@@ -387,7 +387,7 @@ export const defaultDaysData: Record<number, DayContent> = {
     }
   ],
   "streamLink": "https://www.twitch.tv/videos/2645264474",
-  "clipLink": "https://www.twitch.tv/gamelxrd/clip/CuteFurryWolfRuleFive-FVLazhwL14erbAPN",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/SquareConfidentWolfBibleThump-4FbdTbMbrAC3JWR5",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/1tQVdzVf/16.jpg",
   "forceOpen": true,
@@ -395,7 +395,7 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   17: {
   "title": "День 17",
-  "description": "**16:00** Попытка исправить ошибку в коде провалилась. К сожалению, функция перемотки больше недоступна — этот модуль перегорел. Придется жить с последствиями и фиксировать их на моментальную пленку.",
+  "description": "**16:00** Попытка исправить ошибку в коде провалилась. К сожалению, функция перемотки больше недоступна — этот модуль перегорел. Придется жить с последствиями и фиксировать их на моментальную пленку.\n\n---\n\n**22:40** Слишком частые прыжки между мирами дестабилизировали систему. Нам нужно время, чтобы синхронизировать таймлайны, иначе мы рискуем застрять в пустоте. Объявляем перерыв. Продолжение следует, как только эфир стабилизируется.",
   "todos": [
     {
       "id": 1,
@@ -408,8 +408,7 @@ export const defaultDaysData: Record<number, DayContent> = {
       "done": false
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2646123143",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/1tQVdzVf/16.jpg",
   "forceOpen": true,
