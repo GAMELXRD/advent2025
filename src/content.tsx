@@ -373,21 +373,21 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   16: {
   "title": "День 16",
-  "description": "**15:00** Запись в процессе сканирования. Датчики ловят странное эхо, словно сигнал идет сразу из двух мест. Пожалуйста, оставайтесь в зоне отдыха и попробуйте переключиться на нужную частоту.",
+  "description": "**15:00** Запись в процессе сканирования. Датчики ловят странное эхо, словно сигнал идет сразу из двух мест. Пожалуйста, оставайтесь в зоне отдыха и попробуйте переключиться на нужную частоту.\n\n---\n\n**23:20** Сигнал синхронизирован. Изображение всё еще двоится. Включаем Импульс, чтобы найти скрытые улики, невидимые невооруженным глазом. Мы идем дальше, к истине.",
   "todos": [
     {
       "id": 1,
       "text": "Помогать стримеру с выбором",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Тегать @Kpingulya в нужные моменты",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2645264474",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/CuteFurryWolfRuleFive-FVLazhwL14erbAPN",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/1tQVdzVf/16.jpg",
   "forceOpen": true,
