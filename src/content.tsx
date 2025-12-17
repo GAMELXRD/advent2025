@@ -395,13 +395,24 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   17: {
   "title": "День 17",
-  "description": "Попытка исправить ошибку в коде провалилась. К сожалению, функция перемотки больше недоступна — этот модуль перегорел. Придется жить с последствиями и фиксировать их на моментальную пленку.",
-  "todos": [],
+  "description": "**16:00** Попытка исправить ошибку в коде провалилась. К сожалению, функция перемотки больше недоступна — этот модуль перегорел. Придется жить с последствиями и фиксировать их на моментальную пленку.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Помогать стримеру с выбором",
+      "done": false
+    },
+    {
+      "id": 2,
+      "text": "Тегать @Kpingulya хоть иногда",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/v6SWMH5k/16blur.jpg",
-  "forceOpen": false,
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/1tQVdzVf/16.jpg",
+  "forceOpen": true,
   "customColor": "#f2f2f2"
   },
   18: {
