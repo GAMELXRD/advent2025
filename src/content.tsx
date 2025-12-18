@@ -400,12 +400,12 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Помогать стримеру с выбором",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "text": "Тегать @Kpingulya хоть иногда",
-      "done": false
+      "done": true
     }
   ],
   "streamLink": "https://www.twitch.tv/videos/2646123143",
@@ -416,8 +416,14 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   18: {
   "title": "День 18",
-  "description": "Звездная карта затерялась где-то среди бесконечных серых плит и сугробов. Ждем сигнала, считая желтые квадраты чужих окон, а чтобы не скучать — включаем старое доброе кино.",
-  "todos": [],
+  "description": "**15:00** Звездная карта затерялась где-то среди бесконечных серых плит и сугробов. Ждем сигнала, считая желтые квадраты чужих окон, а чтобы не скучать — включаем старое доброе кино.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Поставить свою музыку",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
