@@ -449,14 +449,20 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   20: {
   "title": "День 20",
-  "description": "Звездный телеграф молчит. Ночь на этой стороне планеты кажется бесконечной, но тьма не вечна. Наша задача — просто дождаться первых лучей звезды. Пожалуйста, оставайтесь вместе.",
-  "todos": [],
+  "description": "**17:00** Звездный телеграф молчит. Ночь на этой стороне планеты кажется бесконечной, но тьма не вечна. Наша задача — просто дождаться первых лучей звезды. Пожалуйста, оставайтесь вместе.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Сделать ставку по игре",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "customColor": "purple",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/mr9Yj2Jb/20blur.jpg",
-  "forceOpen": false
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/pFhB1bw/20.jpg", 
+  "forceOpen": true
   },
   21: {
   "title": "День 21",
