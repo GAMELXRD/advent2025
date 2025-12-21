@@ -466,13 +466,19 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   21: {
   "title": "День 21",
-  "description": "Запись на калибровке. На экранах появились странные символы, смысла которых мы не понимаем. Кто-нибудь может описать это словами, чтобы мы смогли продолжить движение?",
-  "todos": [],
+  "description": "**19:00** Двигатели переведены в режим охлаждения. Навигационные карты свернуты — сегодня мы никуда не летим. Экипажу предписано занять горизонтальное положение в кают-компании. Запускаем архивы старого кинематографа для восстановления морального духа.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Отдыхать в хорошем настроении",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
-  "hidden": true,
-  "imageUrl": "https://i.ibb.co/xp8RLNM/21blur.jpg",
-  "forceOpen": false,
+  "hidden": false,
+  "imageUrl": "https://i.ibb.co/qY3XCbZj/blank.jpg",
+  "forceOpen": true,
   "customColor": "#f2f2f2"
   },
   22: {
