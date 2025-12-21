@@ -449,16 +449,16 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   20: {
   "title": "День 20",
-  "description": "**17:00** Звездный телеграф молчит. Ночь на этой стороне планеты кажется бесконечной, но тьма не вечна. Наша задача — просто дождаться первых лучей звезды. Пожалуйста, оставайтесь вместе.",
+  "description": "**17:00** Звездный телеграф молчит. Ночь на этой стороне планеты кажется бесконечной, но тьма не вечна. Наша задача — просто дождаться первых лучей звезды. Пожалуйста, оставайтесь вместе.\n\n---\n\n**07:00** Солнце взошло. Датчики движения больше не фиксируют угроз. Мы замерли, когда это было нужно, и принимали верные решения. Кошмар позади, выжившие поднимаются на борт.",
   "todos": [
     {
       "id": 1,
       "text": "Сделать ставку по игре",
-      "done": false
+      "done": true
     }
   ],
-  "streamLink": "",
-  "clipLink": "",
+  "streamLink": "https://www.twitch.tv/videos/2648648336",
+  "clipLink": "https://www.twitch.tv/gamelxrd/clip/SarcasticTawdryPorpoiseHeyGirl-_W1QnufLzoqaAMED",
   "customColor": "purple",
   "hidden": false,
   "imageUrl": "https://i.ibb.co/pFhB1bw/20.jpg", 
