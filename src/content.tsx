@@ -471,7 +471,7 @@ export const defaultDaysData: Record<number, DayContent> = {
     {
       "id": 1,
       "text": "Отдыхать в хорошем настроении",
-      "done": false
+      "done": true
     }
   ],
   "streamLink": "",
@@ -483,12 +483,18 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   22: {
   "title": "День 22",
-  "description": "Космический почтальон уже прибыл. Странно, но он игнорирует гравитацию и ползает по потолку кают-компании. Ждем, когда он к нам спустится.",
-  "todos": [],
+  "description": "**17:30** Космический почтальон уже прибыл. Странно, но он игнорирует гравитацию и ползает по потолку кают-компании. Ждем, когда он к нам спустится.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Составить список блюд на праздник",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
-  "imageUrl": "https://i.ibb.co/8nnWM2FF/22blur.jpg",
+  "imageUrl": "https://i.ibb.co/8nnWM2FF/22blur.jpg", 
   "forceOpen": false,
   "customColor": "#f2f2f2"
   },
