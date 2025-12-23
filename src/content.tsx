@@ -499,12 +499,12 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   23: {
   "title": "День 23",
-  "description": "Данные из этого дня скрыты иллюзией. Мы посылаем импульс за импульсом, пытаясь подсветить скрытое. Если услышите характерный звон — значит, файл найден. Отдыхайте в кают-компании.",
+  "description": "Запись на калибровке. На экранах появились странные символы, смысла которых мы не понимаем. Кто-нибудь может описать это словами, чтобы мы смогли продолжить движение?",
   "todos": [],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
-  "imageUrl": "https://i.ibb.co/tPpLndQM/23blur.jpg",
+  "imageUrl": "https://i.ibb.co/xp8RLNM/21blur.jpg",
   "forceOpen": false,
   "customColor": "#f2f2f2"
   },
