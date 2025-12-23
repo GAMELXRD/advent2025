@@ -499,12 +499,18 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   23: {
   "title": "День 23",
-  "description": "Запись на калибровке. На экранах появились странные символы, смысла которых мы не понимаем. Кто-нибудь может описать это словами, чтобы мы смогли продолжить движение?",
-  "todos": [],
+  "description": "**19:00** Запись на калибровке. На экранах появились странные символы, смысла которых мы не понимаем. Кто-нибудь может описать это словами, чтобы мы смогли продолжить движение?",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Вспомнить про подарок кому-то там..",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "hidden": true,
-  "imageUrl": "https://i.ibb.co/xp8RLNM/21blur.jpg",
+  "imageUrl": "https://i.ibb.co/0VRMQQ7t/21blur.jpg",
   "forceOpen": false,
   "customColor": "#f2f2f2"
   },
