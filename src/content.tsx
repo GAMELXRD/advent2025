@@ -516,8 +516,14 @@ export const defaultDaysData: Record<number, DayContent> = {
   },
   24: {
   "title": "В ночь перед Рождеством..",
-  "description": "Контент на финальной орбите. Болтаем в эфире, пока не приземлится.",
-  "todos": [],
+  "description": "**19:30** Контент на финальной орбите. Болтаем в эфире, пока не приземлится.",
+  "todos": [
+    {
+      "id": 1,
+      "text": "Отлично провести время!",
+      "done": false
+    }
+  ],
   "streamLink": "",
   "clipLink": "",
   "customColor": "amber",
